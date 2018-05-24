@@ -18,7 +18,7 @@ drupal8ci_install() {
 	# Turn on xtracing and error detection so users know what's happening.
 	set -ex
 	# Download and extract GitLab CI configuration and sample tests.
-	wget -O "$tmpdir/master.zip" https://github.com/lullabot/drupal8ci/archive/master.zip
+	wget -O "$tmpdir/master.zip" https://github.com/visabhishek/drupal8ci/archive/master.zip
 	unzip "$tmpdir/master.zip" 'drupal8ci-master/dist/gitlabci/*' -d "$tmpdir"
 	rsync -va --ignore-existing "$tmpdir/drupal8ci-master/dist/gitlabci/" .
     unzip "$tmpdir/master.zip" 'drupal8ci-master/dist/common/*' -d "$tmpdir"
